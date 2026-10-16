@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KALÉ — Artisanal Culinary Lab & Flavor Pairing Studio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kale: {
+                            50: '#F9F8F3',
+                            100: '#EFECE4',
+                            200: '#DCD6C5',
+                            500: '#5B6E58',
+                            600: '#4A5D4E', /* Deep Sage Green */
+                            700: '#3A4B3D',
+                            800: '#2C382E',
+                            dark: '#1C251D',
+                        },
+                        cream: '#F9F8F3',
+                        accent: '#C89B53', /* Soft Ochre Gold */
+                        'accent-hover': '#B28741',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F9F8F3;
+            color: #1C251D;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-serif-heading {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-pattern {
+            background-image: radial-gradient(#4A5D4E 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.05;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-kale-600 selection:text-white">
+
+    <!-- Announcement Bar -->
+    <div class="bg-kale-800 text-cream text-[11px] font-medium tracking-widest py-2 px-4 text-center uppercase">
+        🌿 Welcome to KALÉ Culinary Lab • Follow Us on Instagram <a href="https://instagram.com/thekalelab" target="_blank" class="underline hover:text-accent transition">@thekalelab</a>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="sticky top-0 z-40 bg-cream/90 backdrop-blur-md border-b border-kale-100 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#home" class="flex flex-col group">
+                    <span class="font-serif-heading text-2xl sm:text-3xl tracking-[0.2em] font-bold text-kale-700 group-hover:text-kale-600 transition">KALÉ</span>
+                    <span class="text-[9px] tracking-[0.3em] uppercase text-kale-500 font-medium -mt-1">the · kalé · lab</span>
+                </a>
+
+                <!-- Nav Links -->
+                <div class="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-wider uppercase text-kale-800">
+                    <a href="#home" class="hover:text-accent transition">Home</a>
+                    <a href="#about" class="hover:text-accent transition">About Us</a>
+                    <a href="#visi-misi" class="hover:text-accent transition">Visi & Misi</a>
+                    <a href="#pairing" class="hover:text-accent transition">The Concept</a>
+                    <a href="#products" class="hover:text-accent transition">Products</a>
+                    <a href="#contact" class="hover:text-accent transition">Contact Us</a>
+                </div>
+
+                <!-- Instagram CTA Header -->
+                <div class="flex items-center gap-3">
+                    <a href="https://instagram.com/thekalelab" target="_blank" class="px-5 py-2.5 rounded-full bg-kale-600 text-white text-xs font-semibold uppercase tracking-wider hover:bg-kale-700 transition shadow-md shadow-kale-600/10 flex items-center gap-2">
+                        <i class="fa-brands fa-instagram text-sm"></i> @thekalelab
+                    </a>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-kale-700">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cream border-b border-kale-200 px-6 py-5 space-y-4 text-xs font-semibold tracking-wider uppercase">
+            <a href="#home" class="block text-kale-800 hover:text-accent">Home</a>
+            <a href="#about" class="block text-kale-800 hover:text-accent">About Us</a>
+            <a href="#visi-misi" class="block text-kale-800 hover:text-accent">Visi & Misi</a>
+            <a href="#pairing" class="block text-kale-800 hover:text-accent">The Concept</a>
+            <a href="#products" class="block text-kale-800 hover:text-accent">Products</a>
+            <a href="#contact" class="block text-kale-800 hover:text-accent">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
+        <div class="absolute inset-0 bg-pattern pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Text -->
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-kale-100 border border-kale-200 text-kale-700 text-xs font-medium tracking-wider uppercase">
+                        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                        Culinary & Flavor Pairing Studio
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif-heading font-normal text-kale-dark leading-[1.15]">
+                        Redefining Comfort Food Through <br/>
+                        <span class="italic font-serif text-kale-600 font-semibold">Artisanal Flavor Pairing</span>
+                    </h1>
+
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
+                        KALÉ Lab mengeksplorasi perpaduan harmonis antara rasa manis alami <em>Artisanal Banana Bread</em> bertabur crumble renyah dengan kesegaran harum <em>Jasmine Jelly</em> alami sebagai penyeimbang selera.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#about" class="w-full sm:w-auto px-8 py-4 rounded-full bg-kale-600 text-white font-semibold text-xs tracking-wider uppercase hover:bg-kale-700 transition shadow-lg shadow-kale-600/20 text-center">
+                            Explore Our Story
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white border border-kale-200 text-kale-700 font-semibold text-xs tracking-wider uppercase hover:bg-kale-50 transition text-center">
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Visual -->
+                <div class="lg:col-span-5">
+                    <div class="relative max-w-md mx-auto">
+                        <div class="absolute -inset-3 rounded-3xl bg-kale-100 border border-kale-200 transform -rotate-2"></div>
+                        <div class="relative bg-white rounded-2xl p-6 shadow-2xl border border-kale-200/60 text-center space-y-4">
+                            <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-kale-50 border border-kale-100">
+                                <img src="logo.jpg.jpeg" onerror="this.onerror=null; this.src='https://placehold.co/600x750/5B6E58/FFFFFF?text=KALE+Lab+Pairing';" alt="KALÉ Banana Bread & Jasmine Jelly" class="object-cover w-full h-full hover:scale-105 transition duration-700">
+                            </div>
+                            <div class="space-y-1">
+                                <span class="text-[10px] tracking-[0.2em] font-bold uppercase text-accent">Signature Creation</span>
+                                <h3 class="font-serif-heading text-xl font-bold text-kale-dark">The Perfect Pairing</h3>
+                                <p class="text-xs text-gray-500">Banana Bread + Refreshing Jasmine Jelly</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section id="about" class="py-20 bg-white border-y border-kale-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="gambar1.png" onerror="this.onerror=null; this.src='https://placehold.co/400x500/5B6E58/FFFFFF?text=KALE+Logo';" alt="KALÉ Brand Logo" class="rounded-2xl border border-kale-200 shadow-sm w-full h-64 object-cover">
+                        <img src="gambar2.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x500/5B6E58/FFFFFF?text=KALE+Vibe';" alt="KALÉ Atmosphere" class="rounded-2xl border border-kale-200 shadow-sm w-full h-64 object-cover mt-8">
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-[0.25em] text-accent">Tentang Kami</span>
+                    <h2 class="font-serif-heading text-3xl sm:text-4xl text-kale-dark font-bold leading-tight">
+                        Eksperimen Rasa Modern di Culinary Lab Kami
+                    </h2>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        <strong>KALÉ Lab</strong> adalah sebuah <em>culinary studio</em> modern yang mendedikasikan diri untuk meracik dan mengeksplorasi eksperimen rasa baru (<em>flavor pairing</em>). Mengusung identitas "Lab", KALÉ berfokus pada ketelitian olahan makanan manis yang menenangkan (<em>comfort food</em>) seperti banana bread bertekstur lembut dan manis legit, disandingkan secara elegan dengan minuman floral yang dingin dan menyegarkan.
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Setiap sajian diracik dalam jumlah terbatas (<em>small batches</em>) untuk memastikan kualitas rasa, kesegaran bahan alami, dan nilai estetika tinggi yang memanjakan lidah serta menyegarkan hari Anda.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- VISI & MISI SECTION -->
+    <section id="visi-misi" class="py-20 bg-kale-50/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="text-xs font-bold uppercase tracking-[0.25em] text-accent">Our Core Values</span>
+                <h2 class="font-serif-heading text-3xl sm:text-4xl text-kale-dark font-bold">Visi & Misi KALÉ</h2>
+                <p class="text-xs text-gray-500">Komitmen kami dalam menyajikan karya kuliner berkualitas tinggi.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- VISI Card -->
+                <div class="bg-white p-8 rounded-2xl border border-kale-200 shadow-sm space-y-4 hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-kale-100 text-kale-700 rounded-2xl flex items-center justify-center text-2xl font-serif">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-accent">Our Vision</span>
+                    <h3 class="font-serif-heading text-2xl font-bold text-kale-dark">Visi Perusahaan</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        Menjadi pelopor <em>culinary lab & flavor pairing studio</em> terdepan yang mendefinisikan ulang cara penikmat kuliner menikmati perpaduan antara comfort food berkualitas dengan minuman herbal-floral yang estetis, segar, dan harmonis.
+                    </p>
+                </div>
+
+                <!-- MISI Card -->
+                <div class="bg-white p-8 rounded-2xl border border-kale-200 shadow-sm space-y-4 hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-kale-100 text-kale-700 rounded-2xl flex items-center justify-center text-2xl font-serif">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-accent">Our Mission</span>
+                    <h3 class="font-serif-heading text-2xl font-bold text-kale-dark">Misi Utama</h3>
+                    <ul class="text-xs text-gray-600 space-y-3 leading-relaxed">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-leaf text-kale-600 mt-0.5"></i>
+                            <span>Menggunakan bahan-bahan alami segar berkualitas tanpa pengawet buatan dalam setiap varian olahan.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-vial text-kale-600 mt-0.5"></i>
+                            <span>Secara konsisten melakukan inovasi riset rasa (flavor pairing) untuk menghadirkan sensasi palate cleanser yang pas.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-sparkles text-kale-600 mt-0.5"></i>
+                            <span>Menjaga standar estetika dan penyajian unggul untuk setiap pengalaman bersantai penikmat KALÉ.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE PAIRING CONCEPT -->
+    <section id="pairing" class="py-20 bg-kale-800 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center space-y-3 mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.25em] text-accent">Konsep Inovasi</span>
+                <h2 class="font-serif-heading text-3xl sm:text-4xl font-bold">The Perfect Pairing Philosophy</h2>
+                <p class="text-xs text-kale-100 leading-relaxed">
+                    Satu paket pengalaman rasa lengkap yang saling melengkapi antara tekstur manis lembut dan kesegaran harum floral.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-kale-700/60 p-6 rounded-2xl border border-kale-600 space-y-3">
+                    <i class="fa-solid fa-bread-slice text-3xl text-amber-300"></i>
+                    <h4 class="font-serif-heading text-lg font-bold">Artisanal Banana Bread</h4>
+                    <p class="text-xs text-kale-100 leading-relaxed">
+                        Manis legit dari pisang matang pilihan, bertekstur padat moist dengan aroma butter dan brown sugar yang kuat.
+                    </p>
+                </div>
+
+                <div class="bg-kale-600 p-6 rounded-2xl border border-accent/40 space-y-3 relative shadow-xl">
+                    <div class="w-8 h-8 bg-accent text-kale-dark rounded-full flex items-center justify-center mx-auto font-bold text-xs">+</div>
+                    <h4 class="font-serif-heading text-lg font-bold text-amber-200">Palate Cleanser Balance</h4>
+                    <p class="text-xs text-white leading-relaxed">
+                        Keseimbangan sempurna: kepekatan banana bread diimbangi langsung oleh Jasmine Jelly yang harum dingin dan membersihkan langit-langit mulut.
+                    </p>
+                </div>
+
+                <div class="bg-kale-700/60 p-6 rounded-2xl border border-kale-600 space-y-3">
+                    <i class="fa-solid fa-glass-water text-3xl text-emerald-300"></i>
+                    <h4 class="font-serif-heading text-lg font-bold">Refreshing Jasmine Jelly</h4>
+                    <p class="text-xs text-kale-100 leading-relaxed">
+                        Seduhan teh melati alami dingin dengan sentuhan madu murni dan jelly lembut yang memberikan sensasi tenang.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT CATALOGUE SECTION -->
+    <section id="products" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
+                <span class="text-xs font-bold uppercase tracking-[0.25em] text-accent">Sajian Kreasi</span>
+                <h2 class="font-serif-heading text-3xl sm:text-4xl text-kale-dark font-bold">Katalog Produk KALÉ</h2>
+                <p class="text-xs text-gray-500">Dibuat secara teliti dengan komposisi bahan murni alami.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-kale-50/50 rounded-2xl border border-kale-200 overflow-hidden space-y-4 p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-video rounded-xl overflow-hidden bg-white mb-4 border border-kale-100">
+                            <img src="roti.png" onerror="this.onerror=null; this.src='https://placehold.co/600x400/5B6E58/FFFFFF?text=Banana+Bread';" alt="Banana Bread" class="w-full h-full object-cover">
+                        </div>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-amber-800 bg-amber-100 px-2.5 py-1 rounded-full">Baked Daily</span>
+                        <h3 class="font-serif-heading text-xl font-bold text-kale-dark mt-2">Artisanal Banana Bread</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed mt-1">
+                            Olahan roti pisang klasik dengan tekstur moist, ditaburi toping crumble renyah dan choco chip pilihan.
+                        </p>
+                    </div>
+                    <div class="border-t border-kale-200/60 pt-3 text-[11px] text-gray-500">
+                        <strong class="text-kale-700">Komposisi:</strong> Pisang Matang, Butter, Telur, Gula Aren, Tepung Pilihan, Susu, Choco Chips.
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-kale-50/50 rounded-2xl border border-kale-200 overflow-hidden space-y-4 p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-video rounded-xl overflow-hidden bg-white mb-4 border border-kale-100">
+                            <img src="teh3.png" onerror="this.onerror=null; this.src='https://placehold.co/600x400/5B6E58/FFFFFF?text=Jasmine+Jelly';" alt="Jasmine Jelly" class="w-full h-full object-cover">
+                        </div>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-full">Cold Beverage</span>
+                        <h3 class="font-serif-heading text-xl font-bold text-kale-dark mt-2">Refreshing Jasmine Jelly</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed mt-1">
+                            Minuman teh melati beraroma harum floral alami yang dipadukan dengan jelly kenyal dan madu murni.
+                        </p>
+                    </div>
+                    <div class="border-t border-kale-200/60 pt-3 text-[11px] text-gray-500">
+                        <strong class="text-kale-700">Komposisi:</strong> Seduhan Teh Melati Premium, Soft Jelly Alami, Madu Murni.
+                    </div>
+                </div>
+
+                <!-- Product 3: Combo -->
+                <div class="bg-kale-50/50 rounded-2xl border border-kale-200 overflow-hidden space-y-4 p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-video rounded-xl overflow-hidden bg-white mb-4 border border-kale-100">
+                            <img src="combo.jpg" onerror="this.onerror=null; this.src='https://placehold.co/600x400/5B6E58/FFFFFF?text=Jasmine+Jelly';" alt="Jasmine Jelly" class="w-full h-full object-cover">
+                        </div>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-full">Signature Experience</span>
+                        <h3 class="font-serif-heading text-xl font-bold text-kale-dark mt-2">KALÉ Pairing Package</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed mt-1">
+                            Kombinasi harmonis 1 porsi Artisanal Banana Bread disandingkan dengan 1 cup Refreshing Jasmine Jelly dalam kemasan hampers eksklusif
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT US SECTION (CENTERED) -->
+    <section id="contact" class="py-20 bg-kale-50/70 border-t border-kale-200/60">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <div class="space-y-6 max-w-2xl mx-auto">
+                <span class="text-xs font-bold uppercase tracking-[0.25em] text-accent">Hubungi Kami</span>
+                <h2 class="font-serif-heading text-3xl sm:text-4xl font-bold text-kale-dark">Mari Terhubung Dengan KALÉ Lab</h2>
+                <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                    Punya pertanyaan seputar varian produk, kerja sama event, atau pesanan hampers? Jangan ragu untuk menghubungi tim kami melalui kanal di bawah ini.
+                </p>
+
+                <!-- Information Cards Centered Grid -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                    <!-- Instagram -->
+                    <div class="flex items-center gap-4 p-4 bg-white rounded-xl border border-kale-200/70 w-full sm:w-72 text-left shadow-sm hover:shadow-md transition">
+                        <div class="w-10 h-10 rounded-full bg-kale-100 flex items-center justify-center text-kale-700 shrink-0">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-kale-dark">Instagram</h4>
+                            <a href="https://instagram.com/thekalelab" target="_blank" class="text-xs text-kale-600 hover:underline">@thekalelab</a>
+                        </div>
+                    </div>
+
+                    <!-- Jam Operasional -->
+                    <div class="flex items-center gap-4 p-4 bg-white rounded-xl border border-kale-200/70 w-full sm:w-72 text-left shadow-sm hover:shadow-md transition">
+                        <div class="w-10 h-10 rounded-full bg-kale-100 flex items-center justify-center text-kale-700 shrink-0">
+                            <i class="fa-regular fa-clock text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-kale-dark">Jam Operasional</h4>
+                            <p class="text-xs text-gray-500">Senin - Sabtu: 09.00 - 17.00 WIB</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-kale-dark text-kale-100 py-8 text-center text-xs border-t border-kale-800">
+        <p>&copy; 2026 KALÉ Culinary Lab. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Contact Form Submission
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            alert('Terima kasih! Pesan Anda telah terkirim ke tim KALÉ Lab.');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
